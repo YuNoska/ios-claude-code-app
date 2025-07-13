@@ -22,12 +22,12 @@ struct TopView: View {
                     .foregroundColor(.secondary)
             }
             
-            Picker("オプションを選択", selection: $viewModel.selectedOption) {
+            Picker("料理の種類を選択", selection: $viewModel.selectedOption) {
                 ForEach(viewModel.options, id: \.self) { option in
                     Text(option).tag(option)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
+            .pickerStyle(MenuPickerStyle())
             .padding(.horizontal, 40)
             
             Button(action: {

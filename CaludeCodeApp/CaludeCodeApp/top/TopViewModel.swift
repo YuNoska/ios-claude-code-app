@@ -3,11 +3,11 @@ import Observation
 
 @Observable
 class TopViewModel {
-    var selectedOption: String = "Option 1"
+    var selectedOption: String = "Italian"
     var showAlert: Bool = false
     var isLoading: Bool = false
     
-    let options = ["Option 1", "Option 2", "Option 3"]
+    let options = ["Italian", "Chinese", "Indian", "American"]
     
     func callApis() async -> Void {
         isLoading = true
